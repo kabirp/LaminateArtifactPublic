@@ -1,0 +1,24 @@
+SageMath10.6; Lattice Estimator3e48ef421ec256afddb3e7d2249a77eab6e9ba12
+N=16384; secret=Uniform(-1,1,N); error=CenteredBinomial(21); m=oo; RC.MATZOV; GSA
+data_primes=[1152921497895862273, 36028481325662209, 36028509243375617, 36028635946844161, 36028638094360577, 36028674602139649, 36028681044688897, 36028700372336641, 36028786272993281] special_prime=36028797017456641
+data_bits=500 key_bits=555 q_key=117932170396346944459410190693374114003400320397216607346758606816948297349633512240242794693521283390048682147577688258466769536444963480787246611593184703351219027969
+log2(q_key)=554.99994916705
+primal-uSVP          rop: ≈2^99.1
+         red: ≈2^99.1
+           δ: 1.005853
+           β:      224
+           d:    31161
+         tag:     usvp
+log2(rop)=99.08463738878
+primal-BDD          rop: ≈2^98.9
+         red: ≈2^98.8
+         svp: ≈2^90.8
+           β:      223
+           η:      247
+           d:    31984
+         tag:      bdd
+log2(rop)=98.85208995868
+Reported minimum: 98.9 bits
+privacy.target_bits=80
+privacy.estimate_bits=98.85208995868
+privacy.target_result=PASS

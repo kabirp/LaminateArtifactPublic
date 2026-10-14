@@ -1,0 +1,4 @@
+format=laminate-benchmark-run-v1
+run.variant=base
+run.profile=quick
+run.id=report-renderer-fixture

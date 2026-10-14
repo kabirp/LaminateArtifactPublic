@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 20,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "dev-mock",
+      "displayName": "Laminate Mock development",
+      "description": "Configure the complete Mock development tree and editor compile database.",
+      "generator": "Unix Makefiles",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "BUILD_TESTING": "ON",
+        "BUILD_BENCHMARKS": "ON",
+        "LAMINATE_EXTENDED_TESTS": "OFF",
+        "LAMINATE_WITH_SEAL": "OFF"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "dev-mock",
+      "configurePreset": "dev-mock"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "dev-mock",
+      "configurePreset": "dev-mock",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}

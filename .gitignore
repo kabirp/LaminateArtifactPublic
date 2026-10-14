@@ -1,0 +1,14 @@
+/build/
+/build-*/
+/compile_commands.json
+/.cache/
+__pycache__/
+*.pyc
+# Local working context; public documentation belongs in the tracked tree.
+/agent_docs/
+/paper_docs/
+/paper_notes/
+.DS_Store
+*.swp
+*.tmp
+/tmp/

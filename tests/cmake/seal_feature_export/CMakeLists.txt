@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.20)
+project(LaminateSealFeatureExport NONE)
+
+if(NOT MODULE OR NOT FAKE_SEAL_DIR)
+    message(FATAL_ERROR "MODULE and FAKE_SEAL_DIR are required")
+endif()
+
+set(CMAKE_SYSTEM_PROCESSOR x86_64)
+set(LAMINATE_SEAL_DIR "${FAKE_SEAL_DIR}")
+set(LAMINATE_REQUIRE_SEAL_HEXL ON)
+include("${MODULE}")
+
+laminate_find_seal(exported_version exported_acceleration exported_hexl)
+if(NOT exported_version STREQUAL "4.1.2")
+    message(FATAL_ERROR "SEAL version was not exported")
+endif()
+if(NOT exported_acceleration STREQUAL "intel-hexl-runtime-dispatch")
+    message(FATAL_ERROR "SEAL acceleration was not exported")
+endif()
+if(NOT exported_hexl)
+    message(FATAL_ERROR "SEAL HEXL feature was not exported")
+endif()

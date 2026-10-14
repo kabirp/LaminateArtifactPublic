@@ -1,0 +1,4 @@
+format=laminate-benchmark-run-v1
+run.variant=base
+run.profile=target-balancedLaned
+run.id=target-report-renderer-fixture

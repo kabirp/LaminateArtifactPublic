@@ -1,0 +1,22 @@
+SageMath 10.6; Lattice Estimator 3e48ef421ec256afddb3e7d2249a77eab6e9ba12
+N=16384; secret=Uniform(-1,1,N); error=CenteredBinomial(21); m=oo; RC.MATZOV; GSA
+
+Base target-mulHeavyPyramid candidate eight45bitheads: data_primes=[1053858393162252289, 15032614913, 53687910401, 35004517580801, 35017402679297, 35047467909121, 35092565753857, 35111893401601, 35126926016513, 35144106147841, 35156991246337] special_prime=1152921504606748673
+data_bits=490 key_bits=550 q_key=2252845590430267110277524537869427738650641260125813758950545095213049642808796592620999746322511488555765073544730198483222399946308936307459211970296085569036976129
+log2(q_key)=549.28988409136
+primal-uSVP          rop: ≈2^99.9
+         red: ≈2^99.9
+           δ: 1.005804
+           β:      227
+           d:    31922
+         tag:     usvp
+log2(rop)=99.94730270266
+primal-BDD          rop: ≈2^99.9
+         red: ≈2^99.9
+         svp: ≈2^91.1
+           β:      227
+           η:      248
+           d:    31586
+         tag:      bdd
+log2(rop)=99.93502207607
+Reported minimum: 99.9 bits
