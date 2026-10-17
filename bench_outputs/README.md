@@ -8,7 +8,7 @@ outcome, timings, proof size, and resource use for each run.
 | Local evaluation | [Report](local-balancedLaned-summary.md) | [Report](local-mulHeavy-summary.md) |
 | FHE without integrity | [Report](noIntegrity-balancedLaned-summary.md) | [Report](noIntegrity-mulHeavy-summary.md) |
 | LaminateBase | [Report](base-balancedLaned-summary.md) | [Report](base-mulHeavy-summary.md) |
-| LaminateFolded | [Report](folded-balancedLaned-summary.md) | TBD |
+| LaminateFolded | [Report](folded-balancedLaned-summary.md) | [Report](folded-mulHeavy-summary.md) |
 | LaminateLaned, B=1 | [Report](laned-b1-balancedLaned-summary.md) | — |
 | LaminateLaned, B=128 | [Report](laned-b128-balancedLaned-summary.md) | — |
 | LaminateLaned, B=16,384 | [Report](laned-b16384-balancedLaned-summary.md) | — |
