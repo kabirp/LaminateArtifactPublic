@@ -1,0 +1,25 @@
+SageMath 10.6; Lattice Estimator 3e48ef421ec256afddb3e7d2249a77eab6e9ba12; tracked tree clean
+N=16384; secret=Uniform(-1,1,N); error=CenteredBinomial(21); m=oo; RC.MATZOV; GSA
+data_primes=[1152921497895862273, 15032614913, 122408435713, 246964387841, 272734584833, 547616686081, 140720308191233, 4503599626321921, 9007072549175297] special_prime=36028797017456641
+prime/congruence/distinctness and exact sample-chain checks=PASS
+data_bits=398 key_bits=453 q_key=16093363132736514275194257691316077512645412122647421797316795414135873224002375256750327911101451613001968947020214412994250340142284801
+log2(q_key)=452.46868675143
+primal-uSVP          rop: ≈2^121.8
+         red: ≈2^121.8
+           δ: 1.004779
+           β:      306
+           d:    31765
+         tag:     usvp
+log2(rop)=121.77250920090
+primal-BDD          rop: ≈2^121.6
+         red: ≈2^121.5
+         svp: ≈2^117.9
+           β:      305
+           η:      345
+           d:    32611
+         tag:      bdd
+log2(rop)=121.64673324516
+Reported minimum: 121.6 bits
+privacy.target_bits=80
+privacy.estimate_bits=121.64673324516
+privacy.target_result=PASS

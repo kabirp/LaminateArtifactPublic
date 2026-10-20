@@ -1,0 +1,16 @@
+format=laminate-storage-provenance-v2
+storage.capture_phase=server-start
+storage.captured_at_utc=2026-09-03T02:00:00Z
+storage.artifact_root=/mnt/disks/laminate-storage/laminate-bench
+storage.backend=google-local-ssd-raid0
+storage.mount_source=/dev/md127
+storage.mount_target=/mnt/disks/laminate-storage
+storage.filesystem_type=ext4
+storage.mount_options=rw,noatime,nodiratime
+storage.filesystem_total_bytes=3221225472000
+storage.filesystem_available_bytes=3120000000000
+storage.local_ssd.raid_level=raid0
+storage.local_ssd.raid_member_count=8
+storage.local_ssd.raid_degraded_members=0
+storage.local_ssd.raid_chunk_bytes=524288
+storage.local_ssd.raid_members=nvme0n1,nvme1n1,nvme2n1,nvme3n1,nvme4n1,nvme5n1,nvme6n1,nvme7n1

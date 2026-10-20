@@ -1,0 +1,274 @@
+{
+  "format": "laminate-nointegrity-parameter-trials-v1",
+  "scope": "Summary of local parameter-selection probes, not benchmark timings or full-target executions.",
+  "prime_encoding": "Decimal strings preserve exact integers in readers that use floating-point JSON numbers.",
+  "bit_length_definition": "floor(log2(product)) + 1; key product includes the special prime",
+  "platform": {
+    "os": "macOS",
+    "architecture": "arm64",
+    "compiler": "AppleClang 15",
+    "seal_version": "4.1.2",
+    "kernels": "portable"
+  },
+  "common_parameters": {
+    "ring_degree": 16384,
+    "plaintext_modulus": 65537,
+    "ciphertext_multiplication_depth": 8,
+    "fresh_data_limbs": 9,
+    "output_data_limbs": 1,
+    "output_prime_decimal": "1152921497895862273",
+    "modulus_switching": "one drop after each ciphertext-ciphertext multiplication layer"
+  },
+  "acceptance": {
+    "minimum_noise_budget_bits": 15,
+    "plaintext_check": "Exact equality in every slot against the layered clear computation before and after each modulus switch; independent scalar endpoint check.",
+    "sum_checks": "For each selected root, correlated copies matching the final reduction count; also the sum of distinct selected roots.",
+    "stop_rule": "Stop the candidate at its first required failure; do not replace a rejected sample with a new key."
+  },
+  "trials": [
+    {
+      "id": "balancedLaned-352",
+      "profile": "balancedLaned",
+      "result": "REJECTED",
+      "initial_data_modulus_bits": 352,
+      "initial_key_modulus_bits": 412,
+      "data_primes_bottom_to_top_decimal": [
+        "1152921497895862273",
+        "15032614913",
+        "53687910401",
+        "96638238721",
+        "98785755137",
+        "118113402881",
+        "122408435713",
+        "246964387841",
+        "272734584833"
+      ],
+      "special_prime_decimal": "1152921504606748673",
+      "seal_security_level_in_trial": "none",
+      "planned_independent_key_and_encryption_samples": 3,
+      "planned_roots_per_sample": [
+        917569,
+        983104
+      ],
+      "coherent_sum_terms_per_root": 65536,
+      "samples": [
+        {
+          "sample": 1,
+          "exit_code": 0,
+          "roots_completed": 2,
+          "minimum_intermediate_noise_budget_bits": 35,
+          "minimum_coherent_sum_noise_budget_bits": 19,
+          "distinct_selected_roots_sum": {
+            "count": 2,
+            "budget_bits": 35,
+            "plaintext_matches": true
+          }
+        },
+        {
+          "sample": 2,
+          "exit_code": 1,
+          "roots_completed": 0,
+          "failure": {
+            "root": 917569,
+            "layer": 1,
+            "phase": "before-switch",
+            "ciphertext_ordinal": 0,
+            "noise_budget_bits": 0,
+            "plaintext_matches": false,
+            "operation": "last ciphertext multiplication, before its modulus switch"
+          }
+        }
+      ]
+    },
+    {
+      "id": "balancedLaned-379",
+      "profile": "balancedLaned",
+      "result": "PASS-local-sampled-qualification",
+      "initial_data_modulus_bits": 379,
+      "initial_key_modulus_bits": 434,
+      "data_primes_bottom_to_top_decimal": [
+        "1152921497895862273",
+        "865449115649",
+        "882629246977",
+        "959939837953",
+        "972824936449",
+        "998595133441",
+        "1005037682689",
+        "1032955396097",
+        "1095233372161"
+      ],
+      "special_prime_decimal": "36028797017456641",
+      "seal_security_level_in_trial": "tc128",
+      "planned_independent_key_and_encryption_samples": 3,
+      "planned_roots_per_sample": [
+        917569,
+        983104
+      ],
+      "coherent_sum_terms_per_root": 65536,
+      "samples": [
+        {
+          "sample": 1,
+          "exit_code": 0,
+          "roots_completed": 2,
+          "minimum_intermediate_noise_budget_bits": 35,
+          "minimum_coherent_sum_noise_budget_bits": 19,
+          "distinct_selected_roots_sum": {
+            "count": 2,
+            "budget_bits": 34,
+            "plaintext_matches": true
+          }
+        },
+        {
+          "sample": 2,
+          "exit_code": 0,
+          "roots_completed": 2,
+          "minimum_intermediate_noise_budget_bits": 35,
+          "minimum_coherent_sum_noise_budget_bits": 19,
+          "distinct_selected_roots_sum": {
+            "count": 2,
+            "budget_bits": 34,
+            "plaintext_matches": true
+          }
+        },
+        {
+          "sample": 3,
+          "exit_code": 0,
+          "roots_completed": 2,
+          "minimum_intermediate_noise_budget_bits": 35,
+          "minimum_coherent_sum_noise_budget_bits": 19,
+          "distinct_selected_roots_sum": {
+            "count": 2,
+            "budget_bits": 34,
+            "plaintext_matches": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "mulHeavyPyramid-396",
+      "profile": "mulHeavyPyramid",
+      "result": "REJECTED",
+      "initial_data_modulus_bits": 396,
+      "initial_key_modulus_bits": 451,
+      "data_primes_bottom_to_top_decimal": [
+        "1152921497895862273",
+        "4189804527617",
+        "4245639954433",
+        "4284295249921",
+        "4310065446913",
+        "4350868258817",
+        "4355163291649",
+        "4370195906561",
+        "4383081005057"
+      ],
+      "special_prime_decimal": "36028797017456641",
+      "seal_security_level_in_trial": "none",
+      "planned_independent_key_and_encryption_samples": 3,
+      "planned_roots_per_sample": [
+        1042862,
+        1044489,
+        1043854,
+        1043072,
+        1043653,
+        1041858,
+        1044624,
+        1042018
+      ],
+      "coherent_sum_terms_per_root": 3766,
+      "samples": [
+        {
+          "sample": 1,
+          "exit_code": 1,
+          "roots_completed": 0,
+          "failure": {
+            "root": 1042862,
+            "layer": 1,
+            "phase": "before-switch",
+            "ciphertext_ordinal": 0,
+            "noise_budget_bits": 0,
+            "plaintext_matches": false,
+            "operation": "last ciphertext multiplication, before its modulus switch"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mulHeavyPyramid-398",
+      "profile": "mulHeavyPyramid",
+      "result": "PASS-local-sampled-qualification",
+      "initial_data_modulus_bits": 398,
+      "initial_key_modulus_bits": 453,
+      "data_primes_bottom_to_top_decimal": [
+        "1152921497895862273",
+        "15032614913",
+        "122408435713",
+        "246964387841",
+        "272734584833",
+        "547616686081",
+        "140720308191233",
+        "4503599626321921",
+        "9007072549175297"
+      ],
+      "special_prime_decimal": "36028797017456641",
+      "seal_security_level_in_trial": "none",
+      "planned_independent_key_and_encryption_samples": 3,
+      "planned_roots_per_sample": [
+        1042862,
+        1044489,
+        1043854,
+        1043072,
+        1043653,
+        1041858,
+        1044624,
+        1042018
+      ],
+      "coherent_sum_terms_per_root": 3766,
+      "samples": [
+        {
+          "sample": 1,
+          "exit_code": 0,
+          "roots_completed": 8,
+          "minimum_intermediate_noise_budget_bits": 35,
+          "minimum_coherent_sum_noise_budget_bits": 23,
+          "distinct_selected_roots_sum": {
+            "count": 8,
+            "budget_bits": 33,
+            "plaintext_matches": true
+          }
+        },
+        {
+          "sample": 2,
+          "exit_code": 0,
+          "roots_completed": 8,
+          "minimum_intermediate_noise_budget_bits": 35,
+          "minimum_coherent_sum_noise_budget_bits": 23,
+          "distinct_selected_roots_sum": {
+            "count": 8,
+            "budget_bits": 32,
+            "plaintext_matches": true
+          }
+        },
+        {
+          "sample": 3,
+          "exit_code": 0,
+          "roots_completed": 8,
+          "minimum_intermediate_noise_budget_bits": 35,
+          "minimum_coherent_sum_noise_budget_bits": 23,
+          "distinct_selected_roots_sum": {
+            "count": 8,
+            "budget_bits": 33,
+            "plaintext_matches": true
+          }
+        }
+      ]
+    }
+  ],
+  "interpretation": [
+    "Both rejected candidates produced incorrect plaintexts with zero noise budget, not merely a budget below the 15-bit reserve.",
+    "The balanced352 campaign stopped on sample2; the pyramid396 campaign stopped on sample1. Unstarted samples are not counted as passes.",
+    "All candidates retain nine data limbs. Aggregate bit count alone does not determine noise growth or measured runtime; ordered primes and the special prime differ.",
+    "The passed local probes cover selected full-depth subcircuits and stress sums, not the full target or a negligible-failure probability.",
+    "The current 379/398-bit profiles use sec_level_type::none; the balanced 379-bit trial used tc128 admission with identical arithmetic parameters.",
+    "The full-target GCP runs with the current chains passed the runbook's acceptance checks. The client fully decrypted each output, with final noise budgets of 19 bits for balancedLaned and 24 bits for mulHeavyPyramid. See bench_outputs/noIntegrity-balancedLaned-summary.md and bench_outputs/noIntegrity-mulHeavy-summary.md for the measured timings."
+  ]
+}
